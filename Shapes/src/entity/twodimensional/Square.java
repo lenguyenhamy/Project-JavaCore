@@ -25,5 +25,4 @@ public class Square extends TwoDimensional {
     public double getArea() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
 }

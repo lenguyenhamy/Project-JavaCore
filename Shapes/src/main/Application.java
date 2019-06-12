@@ -5,7 +5,7 @@
  */
 package main;
 
-import utils.Validate;
+import util.Validate;
 
 /**
  *

@@ -44,5 +44,4 @@ public class ListShape {
 
         this.list.forEach(shape -> shape.output());
     }
-
 }

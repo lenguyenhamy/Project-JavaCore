@@ -21,7 +21,6 @@ public class StudentMain {
         Scanner scan = new Scanner(System.in);
 
         StudentModel studentModel = new StudentModel();
-        SerializeFile serializeFile = new SerializeFile();
         ArrayList<Student> list = new ArrayList<>();
 
         // start loop menu
@@ -63,7 +62,7 @@ public class StudentMain {
                         System.out.print("Enter file name: ");
                         String fileName = scan.nextLine().trim();
 
-                        list = (ArrayList<Student>) serializeFile.readDataFromFile(fileName);
+                        list = (ArrayList<Student>) SerializeFile.readDataFromFile(fileName);
                         if (list != null) {
                             System.out.println("Load data success!");
                         } else {
@@ -164,7 +163,7 @@ public class StudentMain {
                 case 8:
                     System.out.print("Enter new file name: ");
                     String fileName = scan.nextLine().trim();
-                    if (serializeFile.writeDataToFile(list, fileName)) {
+                    if (SerializeFile.writeDataToFile(list, fileName)) {
                         System.out.println("Save data to file success!");
                     }
                     break;

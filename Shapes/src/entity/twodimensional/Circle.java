@@ -5,7 +5,7 @@
  */
 package entity.twodimensional;
 
-import utils.Validate;
+import util.Validate;
 
 /**
  *
@@ -46,5 +46,4 @@ public class Circle extends TwoDimensional {
     public double getArea() {
         return PI * Math.pow(r, 2);
     }
-
 }

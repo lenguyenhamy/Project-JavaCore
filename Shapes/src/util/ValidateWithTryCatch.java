@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package utils;
+package util;
 
 import java.util.Scanner;
 
@@ -94,5 +94,4 @@ public class ValidateWithTryCatch {
             }
         }
     }
-
 }

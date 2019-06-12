@@ -21,5 +21,4 @@ public abstract class TwoDimensional implements IShape {
 
     @Override
     public abstract double getArea();
-
 }

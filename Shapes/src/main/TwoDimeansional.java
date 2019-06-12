@@ -9,7 +9,7 @@ import bo.ListShape;
 import entity.IShape;
 import entity.twodimensional.Circle;
 import entity.twodimensional.Square;
-import utils.Validate;
+import util.Validate;
 
 /**
  *
