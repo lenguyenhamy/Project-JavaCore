@@ -8,7 +8,7 @@ package main;
 import entity.Student;
 import java.util.ArrayList;
 import java.util.Scanner;
-import model.StudentModel;
+import bo.StudentBO;
 import util.SerializeFile;
 
 /**
@@ -20,7 +20,7 @@ public class StudentMain {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        StudentModel studentModel = new StudentModel();
+        StudentBO studentModel = new StudentBO();
         ArrayList<Student> list = new ArrayList<>();
 
         // start loop menu

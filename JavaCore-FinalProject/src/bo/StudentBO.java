@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package bo;
 
 import entity.Student;
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ import util.ValidateHelper;
  *
  * @author anhdt45
  */
-public class StudentModel implements ICommonMethod<Student> {
+public class StudentBO implements ICommonMethod<Student> {
 
     @Override
     public Student input() {
