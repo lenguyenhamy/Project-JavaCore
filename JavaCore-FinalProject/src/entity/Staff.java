@@ -24,7 +24,7 @@ public class Staff extends Person {
     }
 
     public String getStaffNumber() {
-        return this.staffNumber;
+        return staffNumber;
     }
 
     public void setStaffNumber(String staffNumber) {
@@ -32,7 +32,7 @@ public class Staff extends Person {
     }
 
     public double getSalary() {
-        return this.salary;
+        return salary;
     }
 
     public void setSalary(double salary) {
@@ -41,6 +41,6 @@ public class Staff extends Person {
 
     @Override
     public String display() {
-        return this.staffNumber + " - " + getName() + " - " + ((isGender() == true) ? "Male" : "Female") + " - " + this.salary;
+        return staffNumber + " - " + super.getName() + " - " + (super.isGender() == true ? "Male" : "Female") + " - " + salary;
     }
 }

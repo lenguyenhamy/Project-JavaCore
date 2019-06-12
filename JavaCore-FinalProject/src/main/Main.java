@@ -16,7 +16,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        while (true) {
+        // start loop menu
+        process:
+        do {
+            // main menu
             System.out.println("");
             System.out.println("- - - MENU MANAGEMENT - - -");
             System.out.println("- 1. Staff                -");
@@ -30,14 +33,16 @@ public class Main {
             switch (choose) {
                 case 1:
                     System.out.println("Select 1");
-                    continue;
+                    break;
                 case 2:
-                    //StudentMain.main(args);
-                    continue;
+                    StudentMain.main(args);
+                    break;
                 case 3:
+                    break process;
+                default:
+                    System.out.println("Only select [1-3]. Please try again.\n");
                     break;
             }
-            System.out.println("Only select [1-3]. Please try again.\n");
-        }
+        } while (true);
     }
 }

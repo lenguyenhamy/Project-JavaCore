@@ -16,17 +16,17 @@ public interface ICommonMethod<T> {
 
     T input();
 
-    boolean add(ArrayList<T> paramArrayList, T paramT);
+    boolean add(ArrayList<T> list, T obj);
 
-    boolean update(ArrayList<T> paramArrayList, String paramString);
+    boolean update(ArrayList<T> list, String text);
 
-    boolean delete(ArrayList<T> paramArrayList, String paramString);
+    boolean delete(ArrayList<T> list, String text);
 
-    ArrayList<T> search(ArrayList<T> paramArrayList, String paramString1, String paramString2);
+    ArrayList<T> search(ArrayList<T> list, String keyword, String type);
 
-    void sort(ArrayList<T> paramArrayList, String paramString);
+    void sort(ArrayList<T> list, String type);
 
-    int getIndex(ArrayList<T> paramArrayList, String paramString);
+    int getIndex(ArrayList<T> list, String text);
 
-    void display(ArrayList<T> paramArrayList);
+    void display(ArrayList<T> list);
 }

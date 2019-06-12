@@ -5,7 +5,6 @@
  */
 package model;
 
-import entity.Person;
 import entity.Student;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -28,7 +27,7 @@ public class StudentModel implements ICommonMethod<Student> {
         String name = scanner.nextLine().trim();
         System.out.print("Enter gender: ");
         boolean gender = Boolean.valueOf(scanner.nextLine().trim());
-        double mark = (new ValidateHelper()).getDouble("Enter mark: ");
+        double mark = ValidateHelper.getDouble("Enter mark: ");
 
         return new Student(rollNumber, mark, name, gender);
     }
@@ -63,7 +62,7 @@ public class StudentModel implements ICommonMethod<Student> {
     public boolean delete(ArrayList<Student> list, String rollNumber) {
         int index = getIndex(list, rollNumber);
         if (index >= 0) {
-            Student s = (Student) list.remove(index);
+            Student s = list.remove(index);
             if (s != null) {
                 return true;
             }
@@ -73,7 +72,6 @@ public class StudentModel implements ICommonMethod<Student> {
 
     @Override
     public ArrayList<Student> search(ArrayList<Student> list, String keyword, String type) {
-        
         ArrayList<Student> listResult = new ArrayList<>();
         if (type.equalsIgnoreCase("rollNumber")) {
             for (Student student : list) {
@@ -102,7 +100,7 @@ public class StudentModel implements ICommonMethod<Student> {
         if (type.equalsIgnoreCase("rollNumber")) {
             list.sort(Comparator.comparing(Student::getRollNumber));
         } else if (type.equalsIgnoreCase("name")) {
-            list.sort(Comparator.comparing(Person::getName));
+            list.sort(Comparator.comparing(Student::getName));
         } else {
             list.sort(Comparator.comparing(Student::getMark));
         }
@@ -111,7 +109,7 @@ public class StudentModel implements ICommonMethod<Student> {
     @Override
     public int getIndex(ArrayList<Student> list, String rollNumber) {
         for (int i = 0; i < list.size(); i++) {
-            if (((Student) list.get(i)).getRollNumber().equalsIgnoreCase(rollNumber.trim())) {
+            if (list.get(i).getRollNumber().equalsIgnoreCase(rollNumber.trim())) {
                 return i;
             }
         }

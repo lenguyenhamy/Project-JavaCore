@@ -14,6 +14,7 @@ import java.io.Serializable;
 public class Person implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
     private String name;
     private boolean gender;
 
@@ -26,7 +27,7 @@ public class Person implements Serializable {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
@@ -34,7 +35,7 @@ public class Person implements Serializable {
     }
 
     public boolean isGender() {
-        return this.gender;
+        return gender;
     }
 
     public void setGender(boolean gender) {
@@ -42,6 +43,6 @@ public class Person implements Serializable {
     }
 
     public String display() {
-        return this.name + " - " + this.gender;
+        return name + " - " + gender;
     }
 }

@@ -14,7 +14,8 @@ import java.util.Scanner;
  */
 public class ValidateHelper {
 
-    public double getInteger(String message) {
+    // Validate int
+    public static double getInteger(String message) {
         Scanner scanner = new Scanner(System.in);
         int number = 0;
         while (true) {
@@ -29,9 +30,10 @@ public class ValidateHelper {
         return number;
     }
 
-    public double getDouble(String message) {
+    // Validate double
+    public static double getDouble(String message) {
         Scanner scanner = new Scanner(System.in);
-        double number = 0.0D;
+        double number = 0;
         while (true) {
             try {
                 System.out.print(message);

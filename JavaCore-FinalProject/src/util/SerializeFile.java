@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ultis;
+package util;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -19,7 +19,7 @@ import java.io.ObjectOutputStream;
 public class SerializeFile {
 
     public static boolean writeDataToFile(Object data, String path) {
-        
+
         File file = new File(path);
         if (!file.exists()) {
             try {
@@ -28,7 +28,7 @@ public class SerializeFile {
                 ex.printStackTrace(System.out);
             }
         }
-        
+
         try (FileOutputStream fos = new FileOutputStream(path);
                 ObjectOutputStream oos = new ObjectOutputStream(fos)) {
             oos.writeObject(data);

@@ -24,7 +24,7 @@ public class Student extends Person {
     }
 
     public String getRollNumber() {
-        return this.rollNumber;
+        return rollNumber;
     }
 
     public void setRollNumber(String rollNumber) {
@@ -32,7 +32,7 @@ public class Student extends Person {
     }
 
     public double getMark() {
-        return this.mark;
+        return mark;
     }
 
     public void setMark(double mark) {
@@ -41,6 +41,6 @@ public class Student extends Person {
 
     @Override
     public String display() {
-        return this.rollNumber + " - " + getName() + " - " + ((isGender() == true) ? "Male" : "Female") + " - " + this.mark;
+        return rollNumber + " - " + super.getName() + " - " + (super.isGender() == true ? "Male" : "Female") + " - " + mark;
     }
 }
